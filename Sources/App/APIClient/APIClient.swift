@@ -45,10 +45,6 @@ public actor APIClient {
     }
     
     private func makeRequest<T>(for request: Request<T>) async throws -> URLRequest {
-        print("---path---")
-        print(request.path)
-        print("---query---")
-        print(request.query)
         let url = try makeURL(path: request.path, query: request.query)
         return try await makeRequest(url: url, method: request.method, body: request.body)
     }

@@ -1,20 +1,19 @@
 //
-//  AppleDeveloperNews.swift
+//  SwiftLeeArticle.swift
 //  
 //
-//  Created by Higashihara Yoki on 2021/11/26.
+//  Created by Higashihara Yoki on 2021/11/27.
 //
 
 import Fluent
 import Vapor
 
-#warning("fix access level")
-public struct AppleDeveloperNews: Codable {
-    let items: [AppleDevNewsItem]
-    public let feed: AppleDevNewsFeed
+public struct SwiftLeeArticles: Codable {
+    let items: [SwiftLeeArticle]
+    public let feed: SwiftLeeArticleFeed
 }
 
-public struct AppleDevNewsFeed: Codable {
+public struct SwiftLeeArticleFeed: Codable {
     let url: String
     let title: String
     let link: String
@@ -23,8 +22,8 @@ public struct AppleDevNewsFeed: Codable {
     let image: String
 }
 
-final class AppleDevNewsItem: Model, Content {
-    static let schema = "appleDeveloperNews"
+final class SwiftLeeArticle: Model, Content {
+    static let schema = "swiftLeeArticle"
     
     @ID
     var id: UUID?
@@ -65,4 +64,5 @@ final class AppleDevNewsItem: Model, Content {
         self.thumbnail = thumbnail
     }
 }
+
 

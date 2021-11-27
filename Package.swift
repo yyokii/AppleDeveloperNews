@@ -4,13 +4,15 @@ import PackageDescription
 let package = Package(
     name: "AppleDeveloperNews",
     platforms: [
-       .macOS(.v10_15)
+        .macOS(.v12)
     ],
     dependencies: [
         // 💧 A server-side Swift web framework.
         .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0"),
         .package(url: "https://github.com/vapor/fluent.git", from: "4.0.0"),
         .package(url: "https://github.com/vapor/fluent-postgres-driver.git", from: "2.0.0"),
+        
+        .package(url: "https://github.com/scinfu/SwiftSoup", from: "2.3.3"),
     ],
     targets: [
         .target(
@@ -18,7 +20,8 @@ let package = Package(
             dependencies: [
                 .product(name: "Fluent", package: "fluent"),
                 .product(name: "FluentPostgresDriver", package: "fluent-postgres-driver"),
-                .product(name: "Vapor", package: "vapor")
+                .product(name: "Vapor", package: "vapor"),
+                .product(name: "SwiftSoup", package: "SwiftSoup")
             ],
             swiftSettings: [
                 // Enable better optimizations when building in Release configuration. Despite the use of

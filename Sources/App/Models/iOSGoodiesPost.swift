@@ -1,5 +1,5 @@
 //
-//  File.swift
+//  iOSGoodiesPost.swift
 //  
 //
 //  Created by Higashihara Yoki on 2021/11/27.

@@ -8,7 +8,7 @@
 import Foundation
 import SwiftSoup
 
-public func scrapeiOSGoodies(url: URL) throws -> iOSGoodiesPost {
+func scrapeiOSGoodies(url: URL) throws -> iOSGoodiesPost {
     let html = try String(contentsOf: url)
     let document = try SwiftSoup.parse(html)
     

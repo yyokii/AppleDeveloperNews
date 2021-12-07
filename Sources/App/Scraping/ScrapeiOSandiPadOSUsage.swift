@@ -8,7 +8,7 @@
 import Foundation
 import SwiftSoup
 
-public func scrapeiOSandiPadOSUsage(url: URL) throws {
+func scrapeiOSandiPadOSUsage(url: URL) throws -> [AppleOSUsage] {
     let html = try String(contentsOf: url)
     let document = try SwiftSoup.parse(html)
     
@@ -19,8 +19,7 @@ public func scrapeiOSandiPadOSUsage(url: URL) throws {
     let iPhoneData = scrapeOSData(of: "iPhone", from: osChartsDivElement)
     let iPadData = scrapeOSData(of: "iPad", from: osChartsDivElement)
     
-    print(iPhoneData)
-    print(iPadData)
+    return [iPhoneData, iPadData]
 }
 
 func scrapeOSData(of deviceName: String, from element: Element) -> AppleOSUsage {

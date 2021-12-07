@@ -8,6 +8,7 @@
 import Foundation
 
 enum APIClientError: Error {
+    case encodeError
     case connectionError(Data)
     case apiError
 }

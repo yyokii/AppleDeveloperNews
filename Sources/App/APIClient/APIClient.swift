@@ -7,14 +7,21 @@
 
 import Foundation
 
-public actor APIClient {
+enum APIClientHost: String {
+    case gitHub = "api.github.com"
+    case rss2Json = "api.rss2json.com"
+}
+
+actor APIClient {
     private let session: URLSession
     private let host: String
     private let serializer = Serializer()
+    private let delegate: APIClientDelegate
     
-    public init(host: String, configuration: URLSessionConfiguration = .default) {
+    init(host: String, configuration: URLSessionConfiguration = .default, delegate: APIClientDelegate? = nil) {
         self.host = host
         self.session = URLSession(configuration: configuration)
+        self.delegate = delegate ?? DefaultAPIClientDelegate()
     }
     
     public func send<T: Decodable>(_ request: Request<T>) async throws -> T {
@@ -36,11 +43,17 @@ public actor APIClient {
         do {
             return try await actuallySend(request)
         } catch {
-            throw error
+            guard await delegate.shouldClientRetry(self, withError: error) else { throw error }
+            return try await actuallySend(request)
         }
     }
     
     private func actuallySend(_ request: URLRequest) async throws -> (Data, URLResponse) {
+        var request = request
+        
+        if request.url?.host == APIClientHost.gitHub.rawValue {
+            delegate.client(self, willSendRequest: &request)
+        }
         return try await session.data(for: request, delegate: nil)
     }
     
@@ -81,7 +94,8 @@ public actor APIClient {
     private func validate(response: URLResponse, data: Data) throws {
         guard let httpResponse = response as? HTTPURLResponse else { return }
         if !(200..<300).contains(httpResponse.statusCode) {
-            throw APIClientError.apiError
+            print("❌ : code \(httpResponse.statusCode)")
+            throw delegate.client(self, didReceiveInvalidResponse: httpResponse, data: data)
         }
     }
 }

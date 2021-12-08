@@ -1,5 +1,5 @@
 //
-//  GenerateAppleDevNesws.swift
+//  GenerateAppleDevNews.swift
 //  
 //
 //  Created by Higashihara Yoki on 2021/11/29.
@@ -18,21 +18,15 @@ struct RepsContentsUpdate: Encodable {
     var branch: String
 }
 
-//public struct GenerateAppleDevNeswsJob: AsyncScheduledJob {
-public struct GenerateAppleDevNeswsJob {
-    public init() {}
+struct GenerateAppleDevNewsJob: AsyncScheduledJob {
+    init() {}
     
-    public func run(context: QueueContext) async throws {
+    func run(context: QueueContext) async throws {
         let content = try await generateMdContent()
-        try await updateGitHub(content: content)
+        try await updateGitHub(content: content.content)
     }
     
-    public func demo() async throws {
-        let content = try await generateMdContent()
-        try await updateGitHub(content: content)
-    }
-    
-    public func generateMdContent() async throws -> String {
+    func generateMdContent() async throws -> MarkdownContent {
         // Get data
         async let appleDevNews = getAppleDevNews()
         async let swiftLeeArticle = getSwiftLeeArticle()
@@ -48,13 +42,13 @@ public struct GenerateAppleDevNeswsJob {
         iOSGoodiesPost +
         datas.swiftLeeArticle
         
-        return content.content
+        return content
     }
     
     func updateGitHub(content: String) async throws {
         let repositoryBranch: String = "main"
         let client = APIClient(host: APIClientHost.gitHub.rawValue)
-
+        
         // Get repository info
         let repoData: RepositoryContents = try await client.send(.get("/repos/yyokii/AppleDeveloperNews/contents/README.md", query: ["ref": repositoryBranch] ))
         

@@ -8,5 +8,3 @@ db.sqlite
 .swiftpm
 .env
 .env.*
-
-demo.md

@@ -28,6 +28,7 @@ struct GenerateAppleDevNewsJob: AsyncScheduledJob {
     
     func generateMdContent() async throws -> MarkdownContent {
         // Get data
+        let topContent = MarkdownContentNormal(content: defaultReadMeContent)
         async let appleDevNews = getAppleDevNews()
         async let swiftLeeArticle = getSwiftLeeArticle()
         let datas = try await (appleDevNews: appleDevNews, swiftLeeArticle: swiftLeeArticle)
@@ -36,7 +37,8 @@ struct GenerateAppleDevNewsJob: AsyncScheduledJob {
         let iOSGoodiesPost = try getiOSGoodiesPost()
         
         // Create markdown content
-        let content = datas.appleDevNews +
+        let content = topContent +
+        datas.appleDevNews +
         appleOSUsage +
         iOSDevWeeklyIssue +
         iOSGoodiesPost +
@@ -85,16 +87,13 @@ struct GenerateAppleDevNewsJob: AsyncScheduledJob {
         let description = MarkdownLink(title: "data from here", link: urlString)
         content = mdH2 + description
         for usage in osUsage {
-            var usageContent: MarkdownContent!
-            
             let mdH3 = MarkdownHeader(level: .h3, header: usage.device)
-            usageContent = mdH3
-            for item in usage.items {
-#warning("fix to list")
-                let mdContent = MarkdownContentNormal(content: "\(item.name): \(item.value)%")
-                usageContent = usageContent + mdContent
-            }
-            content = content + usageContent
+            let lists: [String] = usage.items
+                .map {
+                    "\($0.name): \($0.value)%"
+                }
+            let usageList = MarkdownUnorderedLists(contents: lists)
+            content = content + mdH3 + usageList
         }
         return content
     }
@@ -110,16 +109,13 @@ struct GenerateAppleDevNewsJob: AsyncScheduledJob {
         let description = MarkdownLink(title: data.title, link: data.link)
         content = mdH2 + description
         for category in data.categories {
-            var categoryContent: MarkdownContent!
-            
             let mdH3 = MarkdownHeader(level: .h3, header: category.title)
-            categoryContent = mdH3
-            for item in category.items {
-#warning("fix to list")
-                let link = MarkdownLink(title: item.title, link: item.link)
-                categoryContent = categoryContent + link
-            }
-            content = content + categoryContent
+            let lists: [String] = category.items
+                .map {
+                    MarkdownLink(title: $0.title, link: $0.link).content
+                }
+            let linkList = MarkdownUnorderedLists(contents: lists)
+            content = content + mdH3 + linkList
         }
         return content
     }
@@ -134,17 +130,14 @@ struct GenerateAppleDevNewsJob: AsyncScheduledJob {
         let mdH2 = MarkdownHeader(level: .h2, header: "iOS Goodies")
         let description = MarkdownLink(title: data.title, link: data.link)
         content = mdH2 + description
-        for topic in data.topics {
-            var topicContent: MarkdownContent!
-            
+        for topic in data.topics {            
             let mdH3 = MarkdownHeader(level: .h3, header: topic.title)
-            topicContent = mdH3
-            for item in topic.items {
-#warning("fix to list")
-                let link = MarkdownLink(title: item.title, link: item.link)
-                topicContent = topicContent + link
-            }
-            content = content + topicContent
+            let lists: [String] = topic.items
+                .map {
+                    MarkdownLink(title: $0.title, link: $0.link).content
+                }
+            let linkList = MarkdownUnorderedLists(contents: lists)
+            content = content + mdH3 + linkList
         }
         return content
     }

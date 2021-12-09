@@ -13,8 +13,21 @@ final class AppTests: XCTestCase {
         let job = GenerateAppleDevNewsJob()
         let content = try await job.generateMdContent()
         let currentDirectoryPath = FileManager().currentDirectoryPath
-        let mdGenerator = MarkdownFileGenerator(basePath: currentDirectoryPath,
+        let mdGenerator = MarkdownFileGenerator(basePath: "\(currentDirectoryPath)/Demo",
                                                 filename: "demo",
+                                                content: content)
+        try mdGenerator.write()
+    }
+    
+    func testGenerateDefaultContentMarkdown() async throws {
+        let app = Application(.testing)
+        defer { app.shutdown() }
+        try configure(app)
+        
+        let content = MarkdownContentNormal(content: defaultReadMeContent) + MarkdownContentNormal(content: "This is Demo")
+        let currentDirectoryPath = FileManager().currentDirectoryPath
+        let mdGenerator = MarkdownFileGenerator(basePath: "\(currentDirectoryPath)/Demo",
+                                                filename: "demoDefaultContent",
                                                 content: content)
         try mdGenerator.write()
     }

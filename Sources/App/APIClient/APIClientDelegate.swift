@@ -5,9 +5,12 @@
 //  Created by Higashihara Yoki on 2021/12/05.
 //
 
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
+
 import Foundation
 import Vapor
-
 
 protocol APIClientDelegate {
     func client(_ client: APIClient, willSendRequest request: inout URLRequest)

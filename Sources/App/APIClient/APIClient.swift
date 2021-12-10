@@ -5,6 +5,10 @@
 //  Created by Higashihara Yoki on 2021/11/27.
 //
 
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
+
 import Foundation
 
 enum APIClientHost: String {

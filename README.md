@@ -8,9 +8,7 @@
 </p>
 
 <p align="center">
-    <a href="https://www.toptal.com/developers/gitignore">
-        <img src="appleDevNewsLogo.png" width="300" height="300"/>
-    </a>
+    <img src="appleDevNewsLogo.png" width="300" height="300"/>
     <br>
     <strong>News for Apple Developer (especially iOS)</strong>
     <br>

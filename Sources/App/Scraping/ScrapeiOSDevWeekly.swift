@@ -8,7 +8,7 @@
 import Foundation
 import SwiftSoup
 
-public func scrapeiOSDevWeekly(url: URL) throws -> iOSDevWeeklyIssue {
+func scrapeiOSDevWeekly(url: URL) throws -> iOSDevWeeklyIssue {
     let html = try String(contentsOf: url)
     let document = try SwiftSoup.parse(html)
     

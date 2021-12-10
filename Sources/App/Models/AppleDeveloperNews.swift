@@ -8,13 +8,12 @@
 import Fluent
 import Vapor
 
-#warning("fix access level")
-public struct AppleDeveloperNews: Codable {
+struct AppleDeveloperNews: Codable {
     let items: [AppleDevNewsItem]
     public let feed: AppleDevNewsFeed
 }
 
-public struct AppleDevNewsFeed: Codable {
+struct AppleDevNewsFeed: Codable {
     let url: String
     let title: String
     let link: String

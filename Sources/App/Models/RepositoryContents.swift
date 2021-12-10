@@ -7,6 +7,6 @@
 
 import Foundation
 
-public struct RepositoryContents: Codable {
+struct RepositoryContents: Codable {
     var sha: String
 }

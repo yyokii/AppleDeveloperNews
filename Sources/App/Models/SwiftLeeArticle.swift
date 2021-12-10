@@ -8,12 +8,12 @@
 import Fluent
 import Vapor
 
-public struct SwiftLeeArticles: Codable {
+struct SwiftLeeArticles: Codable {
     let items: [SwiftLeeArticle]
     public let feed: SwiftLeeArticleFeed
 }
 
-public struct SwiftLeeArticleFeed: Codable {
+struct SwiftLeeArticleFeed: Codable {
     let url: String
     let title: String
     let link: String

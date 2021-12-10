@@ -8,7 +8,7 @@
 import Fluent
 import Vapor
 
-public struct iOSDevWeeklyIssue {
+struct iOSDevWeeklyIssue {
     var title: String
     var pubDate: String
     var link: String

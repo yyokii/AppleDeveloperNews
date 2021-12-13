@@ -11,7 +11,7 @@ final class AppTests: XCTestCase {
         try configure(app)
         
         let job = GenerateAppleDevNewsJob()
-        let content = try await job.generateMdContent()
+        let content = try await job.generateMdContent(client: app.client)
         let currentDirectoryPath = FileManager().currentDirectoryPath
         let mdGenerator = MarkdownFileGenerator(basePath: "\(currentDirectoryPath)/Demo",
                                                 filename: "demo",

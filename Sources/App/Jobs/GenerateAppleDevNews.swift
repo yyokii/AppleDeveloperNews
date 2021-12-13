@@ -11,7 +11,7 @@ import Vapor
 
 import MarkdownGenerator
 
-struct RepsContentsUpdate: Encodable {
+struct RepsContentsUpdate: Content {
     var message: String
     var content: String
     var sha: String
@@ -22,15 +22,16 @@ struct GenerateAppleDevNewsJob: AsyncScheduledJob {
     init() {}
     
     func run(context: QueueContext) async throws {
-        let content = try await generateMdContent()
-        try await updateGitHub(content: content.content)
+        let client = context.application.client
+        let content = try await generateMdContent(client: client)
+        try await updateGitHub(client: client, content: content.content)
     }
     
-    func generateMdContent() async throws -> MarkdownContent {
+    func generateMdContent(client: Client) async throws -> MarkdownContent {
         // Get data
         let topContent = MarkdownContentNormal(content: defaultReadMeContent)
-        async let appleDevNews = getAppleDevNews()
-        async let swiftLeeArticle = getSwiftLeeArticle()
+        async let appleDevNews = getAppleDevNews(client: client)
+        async let swiftLeeArticle = getSwiftLeeArticle(client: client)
         let datas = try await (appleDevNews: appleDevNews, swiftLeeArticle: swiftLeeArticle)
         let appleOSUsage = try getAppleOSUsage()
         let iOSDevWeeklyIssue = try getiOSDevWeeklyIssue()
@@ -47,25 +48,33 @@ struct GenerateAppleDevNewsJob: AsyncScheduledJob {
         return content
     }
     
-    func updateGitHub(content: String) async throws {
+    func updateGitHub(client: Client, content: String) async throws {
         let repositoryBranch: String = "main"
-        let client = APIClient(host: APIClientHost.gitHub.rawValue)
+        let token: String = Environment.get("GITHUB_TOKEN") ?? ""
         
         // Get repository info
-        let repoData: RepositoryContents = try await client.send(.get("/repos/yyokii/AppleDeveloperNews/contents/README.md", query: ["ref": repositoryBranch] ))
+        let repoData = try await client.get("https://\(APIClientHost.gitHub.rawValue)") { req in
+            req.headers = ["Authorization": "token \(token)"]
+            try req.query.encode(["req": repositoryBranch])
+        }
+        let repoContents = try repoData.content.decode(RepositoryContents.self)
+        
         
         // Update contents
         let updateData = RepsContentsUpdate(message: "Update README with API",
                                             content: content.base64EncodedString,
-                                            sha: repoData.sha,
+                                            sha: repoContents.sha,
                                             branch: repositoryBranch)
         
-        let _: Void = try await client.send(.put("/repos/yyokii/AppleDeveloperNews/contents/README.md", body: updateData))
+        try await client.post("https://\(APIClientHost.gitHub.rawValue)") { req in
+            req.headers = ["Authorization": "token \(token)"]
+            try req.content.encode(updateData)
+        }
     }
     
-    private func getAppleDevNews() async throws -> MarkdownContent {
-        let client = APIClient(host: APIClientHost.rss2Json.rawValue)
-        let data: AppleDeveloperNews = try await client.send(.get("/v1/api.json?rss_url=https://developer.apple.com/news/rss/news.rss"))
+    private func getAppleDevNews(client: Client) async throws -> MarkdownContent {
+        let result = try await client.get("https://\(APIClientHost.rss2Json.rawValue)/v1/api.json?rss_url=https://developer.apple.com/news/rss/news.rss")
+        let data: AppleDeveloperNews = try result.content.decode(AppleDeveloperNews.self)
         
         // Create markdown
         let mdH2 = MarkdownHeader(level: .h2, header: data.feed.title)
@@ -130,7 +139,7 @@ struct GenerateAppleDevNewsJob: AsyncScheduledJob {
         let mdH2 = MarkdownHeader(level: .h2, header: "iOS Goodies")
         let description = MarkdownLink(title: data.title, link: data.link)
         content = mdH2 + description
-        for topic in data.topics {            
+        for topic in data.topics {
             let mdH3 = MarkdownHeader(level: .h3, header: topic.title)
             let lists: [String] = topic.items
                 .map {
@@ -142,9 +151,9 @@ struct GenerateAppleDevNewsJob: AsyncScheduledJob {
         return content
     }
     
-    private func getSwiftLeeArticle() async throws -> MarkdownContent {
-        let client = APIClient(host: APIClientHost.rss2Json.rawValue)
-        let data: SwiftLeeArticles = try await client.send(.get("/v1/api.json?rss_url=https://www.avanderlee.com/feed"))
+    private func getSwiftLeeArticle(client: Client) async throws -> MarkdownContent {
+        let result = try await client.get("https://\(APIClientHost.rss2Json.rawValue)/v1/api.json?rss_url=https://www.avanderlee.com/feed")
+        let data: SwiftLeeArticles = try result.content.decode(SwiftLeeArticles.self)
         
         // Create markdown
         let mdH2 = MarkdownHeader(level: .h2, header: data.feed.title)

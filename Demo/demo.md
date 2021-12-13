@@ -8,9 +8,7 @@
 </p>
 
 <p align="center">
-    <a href="https://www.toptal.com/developers/gitignore">
-        <img src="appleDevNewsLogo.png" width="300" height="300"/>
-    </a>
+    <img src="appleDevNewsLogo.png" width="300" height="300"/>
     <br>
     <strong>News for Apple Developer (especially iOS)</strong>
     <br>
@@ -39,34 +37,32 @@
 
 ## iOS Dev Weekly
 
-[Issue 536  December 3rd 2021](https://iosdevweekly.com//issues/536#start)
+[Issue 537  December 10th 2021](https://iosdevweekly.com//issues/537#start)
 
 ### Sponsored Link
 
-* [Forget writing testing scripts, use Waldo.](https://cur.at/MeKWpdq?m=web)
+* [The world’s first virtualized M1 CI/CD environment on Bitrise](https://cur.at/LoYzEFc?m=web)
 
 ### News
 
-* [What apps are we missing out on?](https://cur.at/FCxlGzB?m=web)
+* [Apple Open Source](https://cur.at/RDmCXph?m=web)
+* [New features for App Store product pages](https://cur.at/h56tiUw?m=web)
 
 ### Tools
 
-* [Making Dependencies Available to Xcode Cloud](https://cur.at/mLJq2VX?m=web)
-* [ITSAppUsesNonExemptEncryption](https://cur.at/jeG26Li?m=web)
+* [Monitoring HTTP Traffic with Instruments](https://cur.at/Edgun5w?m=web)
 
 ### Code
 
-* [Transactions and Animations](https://cur.at/uF5e3n4?m=web)
-* [Test asynchronous code](https://cur.at/Jlak1Bu?m=web)
+* [Solving mysterious logout issues on iOS 15](https://cur.at/cW90WQ2?m=web)
+* [If you’re writing Swift concurrency code...](https://cur.at/VEIwZRX?m=web)
+* [Parsing people's names](https://cur.at/45frYoi?m=web)
+* [Backpressure in Combine](https://cur.at/XdVtwzC?m=web)
 
 ### Design
 
-* [Tiny signs](https://cur.at/jKaXbiN?m=web)
-
-### Business and Marketing
-
-* [The Cardinal Sin of ASO](https://cur.at/cLCkDVG?m=web)
-* [ZIP file press kits are a bad idea](https://cur.at/JYqLJFv?m=web)
+* [Opacity precision](https://cur.at/FdgqNEF?m=web)
+* [Placeholder Data vs Real Data](https://cur.at/ID1W3dr?m=web)
 
 ## iOS Goodies
 

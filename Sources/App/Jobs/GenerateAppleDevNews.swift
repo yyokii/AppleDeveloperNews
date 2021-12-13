@@ -18,6 +18,11 @@ struct RepsContentsUpdate: Content {
     var branch: String
 }
 
+enum APIClientHost: String {
+    case gitHub = "api.github.com"
+    case rss2Json = "api.rss2json.com"
+}
+
 struct GenerateAppleDevNewsJob: AsyncScheduledJob {
     init() {}
     

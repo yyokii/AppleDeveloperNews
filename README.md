@@ -17,7 +17,7 @@
 
 ## News - Apple Developer
 
-[Upcoming price changes on the App Store in Turkey](https://developer.apple.com/news/?id=4li349ao)
+[Swift Playgrounds 4 now available](https://developer.apple.com/news/?id=v868vy6e)
 
 ## Apple OS Usage
 
@@ -37,32 +37,31 @@
 
 ## iOS Dev Weekly
 
-[Issue 537  December 10th 2021](https://iosdevweekly.com//issues/537#start)
+[Issue 538  December 17th 2021](https://iosdevweekly.com//issues/538#start)
 
 ### Sponsored Link
 
-* [The world’s first virtualized M1 CI/CD environment on Bitrise](https://cur.at/LoYzEFc?m=web)
+* [The world’s first virtualized M1 CI/CD environment on Bitrise](https://cur.at/wkifXXb?m=web)
 
 ### News
 
-* [Apple Open Source](https://cur.at/RDmCXph?m=web)
-* [New features for App Store product pages](https://cur.at/h56tiUw?m=web)
+* [Swift Playgrounds 4](https://cur.at/6SBmYF6?m=web)
+* [Improvements to Swift Package Index search](https://cur.at/KQ8Nodf?m=web)
+* [The end of The Swift Weekly Brief?](https://cur.at/yjORs1j?m=web)
 
 ### Tools
 
-* [Monitoring HTTP Traffic with Instruments](https://cur.at/Edgun5w?m=web)
+* [xcinfo](https://cur.at/QuhaMKG?m=web)
 
 ### Code
 
-* [Solving mysterious logout issues on iOS 15](https://cur.at/cW90WQ2?m=web)
-* [If you’re writing Swift concurrency code...](https://cur.at/VEIwZRX?m=web)
-* [Parsing people's names](https://cur.at/45frYoi?m=web)
-* [Backpressure in Combine](https://cur.at/XdVtwzC?m=web)
+* [_printChanges](https://cur.at/RUjxGqU?m=web)
+* [Goodbye MFMailComposeViewController?](https://cur.at/o9H069e?m=web)
+* [Loading Images on iOS 15](https://cur.at/6L4QOlI?m=web)
 
 ### Design
 
-* [Opacity precision](https://cur.at/FdgqNEF?m=web)
-* [Placeholder Data vs Real Data](https://cur.at/ID1W3dr?m=web)
+* [Fun fact...](https://cur.at/zZUQdjR?m=web)
 
 ## iOS Goodies
 
@@ -90,4 +89,4 @@
 
 ## SwiftLee
 
-[RunLoop.main vs DispatchQueue.main: The differences explained](https://www.avanderlee.com/combine/runloop-main-vs-dispatchqueue-main/)
+[Give your Xcode Simulator superpowers with RocketSim](https://www.avanderlee.com/xcode/xcode-simulator-superpowers-rocketsim/)

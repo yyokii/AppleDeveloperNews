@@ -17,7 +17,7 @@
 
 ## News - Apple Developer
 
-[Swift Playgrounds 4 now available](https://developer.apple.com/news/?id=v868vy6e)
+[Upcoming Apple Developer certificate updates](https://developer.apple.com/news/?id=jzd7wqva)
 
 ## Apple OS Usage
 
@@ -89,4 +89,4 @@
 
 ## SwiftLee
 
-[Give your Xcode Simulator superpowers with RocketSim](https://www.avanderlee.com/xcode/xcode-simulator-superpowers-rocketsim/)
+[Reflection in Swift: How Mirror works](https://www.avanderlee.com/swift/reflection-how-mirror-works/)

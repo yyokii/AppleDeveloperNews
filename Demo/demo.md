@@ -37,31 +37,7 @@
 
 ## iOS Dev Weekly
 
-[Issue 538  December 17th 2021](https://iosdevweekly.com//issues/538#start)
-
-### Sponsored Link
-
-* [The world’s first virtualized M1 CI/CD environment on Bitrise](https://cur.at/wkifXXb?m=web)
-
-### News
-
-* [Swift Playgrounds 4](https://cur.at/6SBmYF6?m=web)
-* [Improvements to Swift Package Index search](https://cur.at/KQ8Nodf?m=web)
-* [The end of The Swift Weekly Brief?](https://cur.at/yjORs1j?m=web)
-
-### Tools
-
-* [xcinfo](https://cur.at/QuhaMKG?m=web)
-
-### Code
-
-* [_printChanges](https://cur.at/RUjxGqU?m=web)
-* [Goodbye MFMailComposeViewController?](https://cur.at/o9H069e?m=web)
-* [Loading Images on iOS 15](https://cur.at/6L4QOlI?m=web)
-
-### Design
-
-* [Fun fact...](https://cur.at/zZUQdjR?m=web)
+[Issue 539  December 31st 2021](https://iosdevweekly.com//issues/539#start)
 
 ## iOS Goodies
 
@@ -89,4 +65,4 @@
 
 ## SwiftLee
 
-[Reflection in Swift: How Mirror works](https://www.avanderlee.com/swift/reflection-how-mirror-works/)
+[Swift in 2021: A Year in Review](https://www.avanderlee.com/general/swift-in-2021-a-year-in-review/)

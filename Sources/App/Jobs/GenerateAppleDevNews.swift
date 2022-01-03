@@ -28,7 +28,9 @@ struct GenerateAppleDevNewsJob: AsyncScheduledJob {
     
     func run(context: QueueContext) async throws {
         let client = context.application.client
+        context.application.logger.info("Start generating content")
         let content = try await generateMdContent(client: client)
+        context.application.logger.info("Start updating content")
         try await updateGitHub(client: client, content: content.content)
     }
     

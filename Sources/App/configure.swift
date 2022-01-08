@@ -12,10 +12,7 @@ public func configure(_ app: Application) throws {
     try app.queues.use(.redis(url: Environment.get("REDIS_URL") ?? ""))
 
     let generateAppleDevNews = GenerateAppleDevNewsJob()
-    app.queues.schedule(generateAppleDevNews)
-        .weekly()
-        .on(.sunday)
-        .at(.noon)
+    app.queues.schedule(generateAppleDevNews).weekly().on(.sunday).at(.noon)
     
     try app.queues.startScheduledJobs()
     

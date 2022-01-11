@@ -17,7 +17,7 @@
 
 ## News - Apple Developer
 
-[Upcoming Apple Developer certificate updates](https://developer.apple.com/news/?id=jzd7wqva)
+[Analytics now available for in-app events](https://developer.apple.com/news/?id=pa0x2dzk)
 
 ## Apple OS Usage
 
@@ -37,7 +37,39 @@
 
 ## iOS Dev Weekly
 
-[Issue 539  December 31st 2021](https://iosdevweekly.com//issues/539#start)
+[Issue 540  January 7th 2022](https://iosdevweekly.com//issues/540#start)
+
+### Sponsored Link
+
+* [Build real-time chat in less time with Stream!](https://cur.at/DGsWR63?m=web)
+
+### News
+
+* [Submit your export compliance self-classification report](https://cur.at/6bUVlhi?m=web)
+* [Apple’s use of Swift and SwiftUI in iOS 15](https://cur.at/Cqgfggz?m=web)
+* [Analytics now available for in-app events](https://cur.at/3gD5NxQ?m=web)
+
+### Tools
+
+* [Easier comparison of XCTest failure output](https://cur.at/zp76pxH?m=web)
+* [Forcing an app out of memory on iOS](https://cur.at/UaNkliz?m=web)
+* [Automatically merging conflicts in Xcode project files](https://cur.at/Xo5Y5W7?m=web)
+
+### Code
+
+* [Lessons from Developing an App on the iPad](https://cur.at/fybgAG1?m=web)
+* [A document-based app in Swift Playgrounds for iPad](https://cur.at/2tEeEf?m=web)
+* [A Swift Recoverable Precondition That Can Throw](https://cur.at/INQBoPo?m=web)
+* [Where should you start with accessibility?](https://cur.at/4ZRCwYp?m=web)
+* [Flow](https://cur.at/pIe35gp?m=web)
+
+### Design
+
+* [iOS UI Design Resources](https://cur.at/ix3JwZg?m=web)
+
+### Videos
+
+* [Building a Better Blur](https://cur.at/3M5ZOVy?m=web)
 
 ## iOS Goodies
 
@@ -65,4 +97,4 @@
 
 ## SwiftLee
 
-[Swift in 2021: A Year in Review](https://www.avanderlee.com/general/swift-in-2021-a-year-in-review/)
+[Guard statements in Swift explained with code examples](https://www.avanderlee.com/swift/guard-statements/)

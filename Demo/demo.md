@@ -17,7 +17,7 @@
 
 ## News - Apple Developer
 
-[Analytics now available for in-app events](https://developer.apple.com/news/?id=pa0x2dzk)
+[Update on dating apps distributed on the App Store in the Netherlands](https://developer.apple.com/news/?id=mbbs4zql)
 
 ## Apple OS Usage
 
@@ -25,51 +25,44 @@
 
 ### iPhone
 
-* iOS 14: 90%
-* iOS 13: 8%
+* iOS 15: 72%
+* iOS 14: 26%
 * Earlier: 2%
 
 ### iPad
 
-* iPadOS 14: 91%
-* iPadOS 13: 8%
-* Earlier: 1%
+* iPadOS 15: 57%
+* iPadOS 14: 39%
+* Earlier: 4%
 
 ## iOS Dev Weekly
 
-[Issue 540  January 7th 2022](https://iosdevweekly.com//issues/540#start)
+[Issue 541  January 14th 2022](https://iosdevweekly.com//issues/541#start)
 
 ### Sponsored Link
 
-* [Build real-time chat in less time with Stream!](https://cur.at/DGsWR63?m=web)
+* [Ready to move your iOS builds to M1?](https://cur.at/dnviuxI?m=web)
 
 ### News
 
-* [Submit your export compliance self-classification report](https://cur.at/6bUVlhi?m=web)
-* [Apple’s use of Swift and SwiftUI in iOS 15](https://cur.at/Cqgfggz?m=web)
-* [Analytics now available for in-app events](https://cur.at/3gD5NxQ?m=web)
+* [The "in-app account deletion" deadline is coming](https://cur.at/RBsnCkv?m=web)
 
 ### Tools
 
-* [Easier comparison of XCTest failure output](https://cur.at/zp76pxH?m=web)
-* [Forcing an app out of memory on iOS](https://cur.at/UaNkliz?m=web)
-* [Automatically merging conflicts in Xcode project files](https://cur.at/Xo5Y5W7?m=web)
+* [Do you miss the Touch Bar for Xcode?](https://cur.at/tpYwsvX?m=web)
+* [Quickly test your app in another language](https://cur.at/P3HB1z5?m=web)
+* [Speed up XIP extraction by between 25% and 100%](https://cur.at/S275RNo?m=web)
+* [Swift command-line tools and GitHub workflows](https://cur.at/5iD2MxZ?m=web)
 
 ### Code
 
-* [Lessons from Developing an App on the iPad](https://cur.at/fybgAG1?m=web)
-* [A document-based app in Swift Playgrounds for iPad](https://cur.at/2tEeEf?m=web)
-* [A Swift Recoverable Precondition That Can Throw](https://cur.at/INQBoPo?m=web)
-* [Where should you start with accessibility?](https://cur.at/4ZRCwYp?m=web)
-* [Flow](https://cur.at/pIe35gp?m=web)
+* [An Approach for Migrating From Objective-C to Swift](https://cur.at/LODyjH8?m=web)
+* [swift-custom-dump](https://cur.at/buUvsrC?m=web)
 
 ### Design
 
-* [iOS UI Design Resources](https://cur.at/ix3JwZg?m=web)
-
-### Videos
-
-* [Building a Better Blur](https://cur.at/3M5ZOVy?m=web)
+* [Consistency Sin](https://cur.at/TV7jDD4?m=web)
+* [The new Guide to NSButton styles](https://cur.at/4lB91X6?m=web)
 
 ## iOS Goodies
 

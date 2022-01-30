@@ -17,7 +17,7 @@
 
 ## News - Apple Developer
 
-[Update on dating apps distributed on the App Store in the Netherlands](https://developer.apple.com/news/?id=mbbs4zql)
+[Apple Search Ads now supports custom product pages](https://developer.apple.com/news/?id=ay7673lx)
 
 ## Apple OS Usage
 
@@ -37,32 +37,33 @@
 
 ## iOS Dev Weekly
 
-[Issue 541  January 14th 2022](https://iosdevweekly.com//issues/541#start)
+[Issue 543  January 28th 2022](https://iosdevweekly.com//issues/543#start)
 
 ### Sponsored Link
 
-* [Ready to move your iOS builds to M1?](https://cur.at/dnviuxI?m=web)
+* [Level-up your team's release coordination and automation](https://cur.at/kaTZOyJ?m=web)
 
 ### News
 
-* [The "in-app account deletion" deadline is coming](https://cur.at/RBsnCkv?m=web)
+* [App Store guideline deadlines extended](https://cur.at/4hlKYvY?m=web)
+* [New App Store Connect API capabilities now available](https://cur.at/Lnlstsg?m=web)
+* [Apple Localization Terms Glossary](https://cur.at/3Ucj9I5?m=web)
 
 ### Tools
 
-* [Do you miss the Touch Bar for Xcode?](https://cur.at/tpYwsvX?m=web)
-* [Quickly test your app in another language](https://cur.at/P3HB1z5?m=web)
-* [Speed up XIP extraction by between 25% and 100%](https://cur.at/S275RNo?m=web)
-* [Swift command-line tools and GitHub workflows](https://cur.at/5iD2MxZ?m=web)
+* [Automate your dependency updates](https://cur.at/JNYxuSk?m=web)
+* [An early look at Swift extensible build tools](https://cur.at/mrKgfkD?m=web)
 
 ### Code
 
-* [An Approach for Migrating From Objective-C to Swift](https://cur.at/LODyjH8?m=web)
-* [swift-custom-dump](https://cur.at/buUvsrC?m=web)
+* [Enum or struct?](https://cur.at/NuPXnjx?m=web)
+* [Clash of the Optionals](https://cur.at/LtJnIHw?m=web)
+* [SharePlay in iOS 15.4](https://cur.at/8rsMJPc?m=web)
+* [Making the web better with blocks](https://cur.at/q7qnz5w?m=web)
 
-### Design
+### Business and Marketing
 
-* [Consistency Sin](https://cur.at/TV7jDD4?m=web)
-* [The new Guide to NSButton styles](https://cur.at/4lB91X6?m=web)
+* [The 3 best business models for a consumer company](https://cur.at/4AtwhQk?m=web)
 
 ## iOS Goodies
 
@@ -90,4 +91,4 @@
 
 ## SwiftLee
 
-[Guard statements in Swift explained with code examples](https://www.avanderlee.com/swift/guard-statements/)
+[Self-documenting code in Swift to increase readability](https://www.avanderlee.com/swift/self-documenting-code/)

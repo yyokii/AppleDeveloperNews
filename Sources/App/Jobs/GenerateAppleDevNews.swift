@@ -42,14 +42,12 @@ struct GenerateAppleDevNewsJob: AsyncScheduledJob {
         let datas = try await (appleDevNews: appleDevNews, swiftLeeArticle: swiftLeeArticle)
         let appleOSUsage = try getAppleOSUsage()
         let iOSDevWeeklyIssue = try getiOSDevWeeklyIssue()
-        let iOSGoodiesPost = try getiOSGoodiesPost()
-        
+
         // Create markdown content
         let content = topContent +
         datas.appleDevNews +
         appleOSUsage +
         iOSDevWeeklyIssue +
-        iOSGoodiesPost +
         datas.swiftLeeArticle
         
         return content
@@ -127,28 +125,6 @@ struct GenerateAppleDevNewsJob: AsyncScheduledJob {
         for category in data.categories {
             let mdH3 = MarkdownHeader(level: .h3, header: category.title)
             let lists: [String] = category.items
-                .map {
-                    MarkdownLink(title: $0.title, link: $0.link).content
-                }
-            let linkList = MarkdownUnorderedLists(contents: lists)
-            content = content + mdH3 + linkList
-        }
-        return content
-    }
-    
-    private func getiOSGoodiesPost() throws -> MarkdownContent {
-        let urlString = "https://ios-goodies.com/"
-        let url = URL(string: urlString)!
-        let data = try scrapeiOSGoodies(url: url)
-        
-        // Create markdown
-        var content: MarkdownContent!
-        let mdH2 = MarkdownHeader(level: .h2, header: "iOS Goodies")
-        let description = MarkdownLink(title: data.title, link: data.link)
-        content = mdH2 + description
-        for topic in data.topics {
-            let mdH3 = MarkdownHeader(level: .h3, header: topic.title)
-            let lists: [String] = topic.items
                 .map {
                     MarkdownLink(title: $0.title, link: $0.link).content
                 }

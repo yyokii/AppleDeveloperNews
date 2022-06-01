@@ -15,9 +15,9 @@
     <strong>Update every Sunday</strong>
 </p>
 
-## News - Apple Developer
+## Latest News - Apple Developer
 
-[Apple Search Ads now supports custom product pages](https://developer.apple.com/news/?id=ay7673lx)
+[Code one, code all](https://developer.apple.com/news/?id=ex6w3fgx)
 
 ## Apple OS Usage
 
@@ -37,58 +37,29 @@
 
 ## iOS Dev Weekly
 
-[Issue 543  January 28th 2022](https://iosdevweekly.com//issues/543#start)
+[Issue 560  May 27th 2022](https://iosdevweekly.com//issues/560#start)
 
 ### Sponsored Link
 
-* [Level-up your team's release coordination and automation](https://cur.at/kaTZOyJ?m=web)
+* [Transitioning from Intel to Apple Silicon](https://cur.at/3CtYcfS?m=web)
 
 ### News
 
-* [App Store guideline deadlines extended](https://cur.at/4hlKYvY?m=web)
-* [New App Store Connect API capabilities now available](https://cur.at/Lnlstsg?m=web)
-* [Apple Localization Terms Glossary](https://cur.at/3Ucj9I5?m=web)
+* [EU plans legislation forcing equal hardware/software access to all](https://cur.at/4Tt9pbG?m=web)
+* [Celebrating learning experiences from the Swift Mentorship Program](https://cur.at/NvYk6e4?m=web)
+* [Account deletion requirement starts June 30](https://cur.at/DZfnRWS?m=web)
 
 ### Tools
 
-* [Automate your dependency updates](https://cur.at/JNYxuSk?m=web)
-* [An early look at Swift extensible build tools](https://cur.at/mrKgfkD?m=web)
+* [Introducing the Accessibility Workspace](https://cur.at/rE9ERtv?m=web)
+* [Faster Xcode builds when switching branches](https://cur.at/QM89EjD?m=web)
 
 ### Code
 
-* [Enum or struct?](https://cur.at/NuPXnjx?m=web)
-* [Clash of the Optionals](https://cur.at/LtJnIHw?m=web)
-* [SharePlay in iOS 15.4](https://cur.at/8rsMJPc?m=web)
-* [Making the web better with blocks](https://cur.at/q7qnz5w?m=web)
-
-### Business and Marketing
-
-* [The 3 best business models for a consumer company](https://cur.at/4AtwhQk?m=web)
-
-## iOS Goodies
-
-[Week 411](https://ios-goodies.com/post/668228111222112256/week-411)
-
-### Articles
-
-* [Managing safe area in SwiftUI](https://href.li/?https://swiftwithmajid.com/2021/11/03/managing-safe-area-in-swiftui/)
-* [Managing Focus in SwiftUI List Views](https://href.li/?https://peterfriese.dev/swiftui-list-focus/)
-* [How to Handle Errors in Swift Task Groups](https://href.li/?https://swiftsenpai.com/swift/task-groups-error-handling/)
-* [Introducing XCRemoteCache: the iOS Remote Caching Tool that Cut Our Clean Build Times by 70%](https://href.li/?https://engineering.atspotify.com/2021/11/16/introducing-xcremotecache-the-ios-remote-caching-tool-that-cut-our-clean-build-times-by-70/)
-* [How to create a macOS app without storyboard or xib files](https://href.li/?https://sarunw.com/posts/how-to-create-macos-app-without-storyboard/)
-* [Open Sourcing SwiftUI Navigation](https://href.li/?https://www.pointfree.co/blog/posts/66-open-sourcing-swiftui-navigation)
-* [Composition vs. Inheritance: code architecture solutions explained in Swift](https://href.li/?https://www.avanderlee.com/swift/composition-inheritance-code-architecture/)
-* [Animator: easy trick to make UIKit animations reusable](https://href.li/?https://medium.com/nice-photon-ios/animator-easy-trick-to-make-uikit-animations-reusable-2d10713ca3a)
-
-### Tools/Controls
-
-* [XCRemoteCache](https://href.li/?https://github.com/spotify/XCRemoteCache)
-* [ARHeadsetKit](https://href.li/?https://github.com/philipturner/ARHeadsetKit)
-
-### Videos
-
-* [Getting Started with Swift Concurrency (Async Await, Actors, Continuations, Tasks)](https://href.li/?https://youtu.be/U6lQustiTGE)
+* [Swift Snippets](https://cur.at/ScBhnGx?m=web)
+* [Mastering TimelineView in SwiftUI](https://cur.at/6c6mePu?m=web)
+* [Understanding identity via transitions in SwiftUI](https://cur.at/D1GKd3m?m=web)
 
 ## SwiftLee
 
-[Self-documenting code in Swift to increase readability](https://www.avanderlee.com/swift/self-documenting-code/)
+[Increase App Ratings by using SKStoreReviewController](https://www.avanderlee.com/swift/skstorereviewcontroller-app-ratings/)
